@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  font-family:
+    var(--font-poppins), var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  background: var(--background);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1.5s ease-out;
+}
+
+/* Utility class for Google Drive hosted doodle background */
+.bg-study-doodle {
+  background-image: url('https://lh3.googleusercontent.com/d/1dj6QVDTHbo3xAjVWCoaEwgkLl0-0ge_Z');
+  background-size: cover;
+  background-position: center;
+}
+
