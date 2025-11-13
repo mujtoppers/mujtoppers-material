@@ -22,7 +22,7 @@ const tracks = [
     icon: "📈",
     title: "BBA",
     shortLabel: "BBA",
-    image: "https://lh3.googleusercontent.com/d/12IcyZQi37bXuFb7GJ_a9BKkjtUwSiJ--",
+    image: "https://lh3.googleusercontent.com/d/1PDx7jugft-8pAzcNRvKkCZOS_irLtL9g",
     description:
       "Business modules, finance briefs, and case-study breakdowns tailored for MUJ BBA cohorts.",
     bullets: [
