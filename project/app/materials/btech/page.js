@@ -85,23 +85,16 @@ export default function BTechBranches() {
         aria-hidden="true"
       />
       <main className="mx-auto flex w-full max-w-6xl flex-col gap-16 px-4 sm:px-6 lg:px-0">
-        {/* Back Link */}
-        <div>
-          <Link
-            href="/"
-            className="inline-flex w-fit items-center gap-2 rounded-full border border-white/15 bg-zinc-900/80 px-5 py-2 text-sm font-semibold text-white transition-colors duration-200 hover:bg-zinc-900"
-          >
-            <span>←</span>
-            <span>Back to Home</span>
-          </Link>
-        </div>
-
         {/* Header */}
-        <header className="flex flex-col gap-5 text-center lg:max-w-3xl lg:text-left">
+        <header className="flex flex-col gap-5 text-center mx-auto lg:max-w-3xl">
           <h1 className="text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
-            <span style={{ color: '#ff6a00' }}>BTech</span> Branches
+            <span className="animate-word-1 inline-block text-zinc-900">Explore</span>
+            {" "}
+            <span className="animate-word-2 inline-block text-gradient-orange-underline">BTech</span>
+            {" "}
+            <span className="animate-word-3 inline-block text-zinc-900">Branches</span>
           </h1>
-          <p className="text-sm leading-relaxed text-zinc-600 sm:text-base">
+          <p className="animate-fade-in-up text-sm leading-relaxed text-zinc-600 sm:text-base">
             Select your engineering branch to access curated study materials, notes, and resources.
           </p>
         </header>
@@ -142,6 +135,14 @@ export default function BTechBranches() {
             </Link>
           ))}
         </section>
+
+        {/* Back Link */}
+        <Link
+          href="/"
+          className="inline-flex w-fit items-center gap-2 self-center rounded-full border border-white/15 bg-zinc-900/80 px-5 py-2 text-sm font-semibold text-white transition-colors duration-200 hover:bg-zinc-900"
+        >
+          &larr; Back to Home
+        </Link>
       </main>
     </div>
   );

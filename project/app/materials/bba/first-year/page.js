@@ -194,9 +194,15 @@ export default function BBAFirstYearSubjects() {
             BBA First Year
           </span>
           <h1 className="text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
-            Pick Your <span style={{ color: '#ff6a00' }}>Subject</span> And Dive Into The Resources
+            <span className="animate-word-1 inline-block text-zinc-900">Pick Your</span>
+            {" "}
+            <span className="animate-word-2 inline-block text-gradient-orange-underline">Subject</span>
+            {" "}
+            <span className="animate-word-3 inline-block text-zinc-900">And Dive Into</span>
+            {" "}
+            <span className="animate-word-4 inline-block text-zinc-900">The Resources</span>
           </h1>
-          <p className="text-sm leading-relaxed text-zinc-600 sm:text-base">
+          <p className="animate-fade-in-up text-sm leading-relaxed text-zinc-600 sm:text-base">
             Handpicked PDFs, PYQs, slide decks, and study materials to keep your BBA prep focused. Tap a subject to jump straight to the external resource listing.
           </p>
         </header>

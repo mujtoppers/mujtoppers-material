@@ -37,8 +37,87 @@ body {
   }
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes underlineExpand {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
 .animate-fade-in {
   animation: fadeIn 1.5s ease-out;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.animate-word-1 {
+  animation: fadeInUp 0.6s ease-out 0.1s both;
+}
+
+.animate-word-2 {
+  animation: fadeInUp 0.6s ease-out 0.3s both;
+}
+
+.animate-word-3 {
+  animation: fadeInUp 0.6s ease-out 0.5s both;
+}
+
+.animate-word-4 {
+  animation: fadeInUp 0.6s ease-out 0.7s both;
+}
+
+.text-gradient-orange {
+  background: linear-gradient(135deg, #ff6a00 0%, #ff8c42 50%, #ff6a00 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 3s ease infinite;
+}
+
+.text-gradient-orange-underline {
+  background: linear-gradient(135deg, #ff6a00 0%, #ff8c42 50%, #ff6a00 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 3s ease infinite;
+  position: relative;
+  display: inline-block;
+}
+
+.text-gradient-orange-underline::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(135deg, #ff6a00 0%, #ff8c42 50%, #ff6a00 100%);
+  animation: underlineExpand 0.8s ease-out 0.5s both;
 }
 
 /* Utility class for Google Drive hosted doodle background */

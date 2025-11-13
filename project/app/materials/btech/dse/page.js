@@ -63,20 +63,15 @@ export default function DSEPage() {
         aria-hidden="true"
       />
       <main className="mx-auto flex w-full max-w-6xl flex-col gap-16 px-4 sm:px-6 lg:px-0">
-        <Link
-          href="/materials/btech"
-          className="inline-flex w-fit items-center gap-2 rounded-full border border-white/15 bg-zinc-900/80 px-4 py-2 text-sm font-semibold text-white transition-colors duration-200 hover:bg-zinc-900"
-        >
-          &larr; Back to BTech branches
-        </Link>
-
-        <section className="flex flex-col gap-5 text-center lg:max-w-3xl lg:text-left">
+        <section className="flex flex-col gap-5 text-center mx-auto lg:max-w-3xl">
           <h1 className="text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
-            <span className="text-zinc-900">Explore </span>
-            <span className="text-[#ff6a00] animate-fade-in">DSE </span>
-            <span className="text-zinc-900">Years</span>
+            <span className="animate-word-1 inline-block text-zinc-900">Explore</span>
+            {" "}
+            <span className="animate-word-2 inline-block text-gradient-orange-underline">DSE</span>
+            {" "}
+            <span className="animate-word-3 inline-block text-zinc-900">Years</span>
           </h1>
-          <p className="text-sm leading-relaxed text-zinc-600 sm:text-base">
+          <p className="animate-fade-in-up text-sm leading-relaxed text-zinc-600 sm:text-base">
             Pick your year and dive into curated DSE study resources, notes, and more.
           </p>
         </section>
@@ -162,6 +157,13 @@ export default function DSEPage() {
             );
           })}
         </section>
+
+        <Link
+          href="/materials/btech"
+          className="inline-flex w-fit items-center gap-2 self-center rounded-full border border-white/15 bg-zinc-900/80 px-5 py-2 text-sm font-semibold text-white transition-colors duration-200 hover:bg-zinc-900"
+        >
+          &larr; Back to BTech branches
+        </Link>
       </main>
     </div>
   );

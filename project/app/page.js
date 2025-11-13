@@ -22,7 +22,7 @@ const tracks = [
     icon: "📈",
     title: "BBA",
     shortLabel: "BBA",
-    image: "https://lh3.googleusercontent.com/d/1PDx7jugft-8pAzcNRvKkCZOS_irLtL9g",
+    image: "https://lh3.googleusercontent.com/d/1xhXcjGftQ9niqEB8U8JEiAAU4jP9yfe5",
     description:
       "Business modules, finance briefs, and case-study breakdowns tailored for MUJ BBA cohorts.",
     bullets: [
@@ -38,7 +38,7 @@ const tracks = [
     icon: "⚙️",
     title: "BTech",
     shortLabel: "BTech",
-    image: "https://lh3.googleusercontent.com/d/12IcyZQi37bXuFb7GJ_a9BKkjtUwSiJ--",
+    image: "https://lh3.googleusercontent.com/d/1YTsD4DSr9R9J5u6XXipsiyjggYDmStaz",
     description:
       "Branch-specific deep dives, project starter kits, and placement-focused resources.",
     bullets: [
@@ -65,7 +65,13 @@ export default function Home() {
       <main className="mx-auto flex w-full max-w-6xl flex-col gap-16 px-4 sm:px-6 lg:px-0">
         <section className="flex flex-col gap-5 text-center lg:max-w-3xl lg:text-left">
           <h1 className="text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
-            Your <span style={{ color: '#ff6a00' }}>Semester</span> Playbook Starts Here
+            <span className="animate-word-1 inline-block text-zinc-900">Your</span>
+            {" "}
+            <span className="animate-word-2 inline-block text-gradient-orange-underline">Semester</span>
+            {" "}
+            <span className="animate-word-3 inline-block text-zinc-900">Playbook</span>
+            {" "}
+            <span className="animate-word-4 inline-block text-zinc-900">Starts Here</span>
           </h1>
         </section>
 
@@ -81,7 +87,7 @@ export default function Home() {
                 <img
                   src={track.image}
                   alt={track.title}
-                  className={`absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-115 ${track.id === 'first-year' ? 'scale-125 object-center' : ''}`}
+                  className={`absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-128 ${track.id === 'first-year' ? 'scale-125 object-center' : ''} ${track.id === 'btech' ? 'scale-135 object-center' : ''}`}
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-zinc-950/70 via-zinc-900/0" aria-hidden="true" />
                 <span className="absolute bottom-4 left-4 inline-flex items-center gap-2 rounded-full bg-white/90 px-4 py-1.5 text-sm font-semibold uppercase tracking-wide text-zinc-900">
