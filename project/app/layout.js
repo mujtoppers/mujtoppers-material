@@ -21,14 +21,18 @@ const poppins = Poppins({
 export const metadata = {
   title: "MUJ Hoppers - Your Semester Playbook",
   description: "Curated study materials, PYQs, notes, and resources for MUJ students - First Year, BBA, and BTech",
-  viewport: "width=device-width, initial-scale=1",
-  themeColor: "#ff6a00",
   robots: "index, follow",
   openGraph: {
     type: "website",
     title: "MUJ Hoppers - Your Semester Playbook",
     description: "Curated study materials, PYQs, notes, and resources for MUJ students",
   },
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#ff6a00",
 };
 
 export default function RootLayout({ children }) {
