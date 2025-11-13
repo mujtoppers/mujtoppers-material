@@ -7,7 +7,7 @@ const subjects = [
   {
     id: "accounts",
     title: "Accounts",
-    image: "/bba-accounts.jpg",
+    image: "https://lh3.googleusercontent.com/d/1E-eT1SWNIpztu-f-6jIuJzZc0Gwt9oMj",
     href: "https://drive.google.com/drive/folders/1-lbhsFfH45u04Ysd5YtkJtMres_1J5Ni",
     resources: [
       { label: "PYQs", href: "https://drive.google.com/drive/folders/1ctyItzOxUfkHsvnqbEKCLoXS-5n1sg6E?usp=drive_link" },
@@ -20,7 +20,7 @@ const subjects = [
   {
     id: "business-communication",
     title: "Business Communication",
-    image: "/bba-business.jpg",
+    image: "https://lh3.googleusercontent.com/d/1qOiLjF2AIJ3ySnwznArqGa7QVUKuPJRG",
     href: "https://drive.google.com/drive/folders/1-lbhsFfH45u04Ysd5YtkJtMres_1J5Ni",
     resources: [
       { label: "PYQs", href: "https://drive.google.com/drive/folders/1TxjYgO6Nyzkb58ycG8bWMSMw_R-25VrP?usp=drive_link" },
@@ -33,7 +33,7 @@ const subjects = [
   {
     id: "business-laws",
     title: "Business Laws",
-    image: "/bba-business-laws.jpg",
+    image: "https://lh3.googleusercontent.com/d/1eEz40YuMIfwCMVb2yPwt3QUotoauJw3j",
     href: "https://drive.google.com/drive/folders/1-lbhsFfH45u04Ysd5YtkJtMres_1J5Ni",
     resources: [
       { label: "PYQs", href: "https://drive.google.com/drive/folders/1a0Pz7WhrMXb8YEVq__Uu-qUPpsfogCJa?usp=drive_link" },
@@ -46,7 +46,7 @@ const subjects = [
   {
     id: "business-studies",
     title: "Business Studies",
-    image: "/bba-business-studies.jpg",
+    image: "https://lh3.googleusercontent.com/d/1MDUuGseYkLkV3dFk4LjJriA1uIdQVfPl",
     href: "https://drive.google.com/drive/folders/1-lbhsFfH45u04Ysd5YtkJtMres_1J5Ni",
     resources: [
       { label: "PYQs", href: "https://drive.google.com/drive/folders/1Pod_MOeqVoVJZxM_s4yx1xPzan9RqHJ-?usp=drive_link" },
@@ -59,7 +59,7 @@ const subjects = [
   {
     id: "computer",
     title: "Computer",
-    image: "/bba-computer.jpg",
+    image: "https://lh3.googleusercontent.com/d/1LMNTrqyfJ2x7qMcpu-YF7PFoRQjLvtCz",
     href: "https://drive.google.com/drive/folders/1-lbhsFfH45u04Ysd5YtkJtMres_1J5Ni",
     resources: [
       { label: "PYQs", href: "https://drive.google.com/drive/folders/1HDs4_1IUV_yZDsBZe8MPsRJ0urQfF40u?usp=drive_link" },
@@ -72,7 +72,7 @@ const subjects = [
   {
     id: "cost-accounting",
     title: "Cost Accounting",
-    image: "/bba-cost-accounting.jpg",
+    image: "https://lh3.googleusercontent.com/d/12972_yjSOI-AXOjxMgB3Ftw5uWXw2-Vo",
     href: "https://drive.google.com/drive/folders/1-lbhsFfH45u04Ysd5YtkJtMres_1J5Ni",
     resources: [
       { label: "PYQs", href: "https://drive.google.com/drive/folders/1QgCl_NJwB1A-93LVKuB6nYDBWBGl99QK?usp=drive_link" },
@@ -85,7 +85,7 @@ const subjects = [
   {
     id: "economics",
     title: "Economics",
-    image: "/bba-economics.jpg",
+    image: "https://lh3.googleusercontent.com/d/1K8S1VUf1tHXVLWCK7Lf2csFCEz4yafQE",
     href: "https://drive.google.com/drive/folders/1-lbhsFfH45u04Ysd5YtkJtMres_1J5Ni",
     resources: [
       { label: "PYQs", href: "https://drive.google.com/drive/folders/1rCoVgB5YoRiwhM4b2pbB-yH9tP815wvD?usp=drive_link" },
@@ -98,7 +98,7 @@ const subjects = [
   {
     id: "english-sem1",
     title: "English Sem 1",
-    image: "/bba-english.jpg",
+    image: "https://lh3.googleusercontent.com/d/1p6PnsT0FGh1801nHf6E_INS3x-bGqyht",
     href: "https://drive.google.com/drive/folders/1-lbhsFfH45u04Ysd5YtkJtMres_1J5Ni",
     resources: [
       { label: "PYQs", href: "https://drive.google.com/drive/folders/1eEAm3AEI0v2xoim8mbOY5FkEx0apK_X0?usp=drive_link" },
@@ -111,7 +111,7 @@ const subjects = [
   {
     id: "financial",
     title: "Financial Management",
-    image: "/bba-financial.jpg",
+    image: "https://lh3.googleusercontent.com/d/1InzgQ-cubIw8BE4y2WxH4jJ9kREXgp-v",
     href: "https://drive.google.com/drive/folders/1-lbhsFfH45u04Ysd5YtkJtMres_1J5Ni",
     resources: [
       { label: "PYQs", href: "https://drive.google.com/drive/folders/1x-Gcf80FUocm2XO59GGCLaKHox-hRR3O?usp=drive_link" },
@@ -124,7 +124,7 @@ const subjects = [
   {
     id: "human-resource",
     title: "Human Resource Management",
-    image: "/bba-hrm.jpg",
+    image: "https://lh3.googleusercontent.com/d/1k1OGrCBJ_d_HfzBeOp4GtlcZTgiLlrUy",
     href: "https://drive.google.com/drive/folders/1-lbhsFfH45u04Ysd5YtkJtMres_1J5Ni",
     resources: [
       { label: "PYQs", href: "https://drive.google.com/drive/folders/1ZbIl__qGEN6Cw3g7nb7D78abmN5EYHCW?usp=drive_link" },
@@ -137,7 +137,7 @@ const subjects = [
   {
     id: "macro-economics",
     title: "Macro Economics",
-    image: "/bba-macro-economics.jpg",
+    image: "https://lh3.googleusercontent.com/d/1uLtqzKWON3-g1dTU1pWN4Gsay7LW3Q4D",
     href: "https://drive.google.com/drive/folders/1-lbhsFfH45u04Ysd5YtkJtMres_1J5Ni",
     resources: [
       { label: "PYQs", href: "https://drive.google.com/drive/folders/1CnaA1-h2t6WJa6WMA7SuFnUHYBS7Zy4A?usp=drive_link" },
@@ -150,7 +150,7 @@ const subjects = [
   {
     id: "marketing-management",
     title: "Marketing Management",
-    image: "/bba-marketing.jpg",
+    image: "https://lh3.googleusercontent.com/d/1jrv0W8A0eEsRUfZwucS0LlDhs2EikB6Y",
     href: "https://drive.google.com/drive/folders/1-lbhsFfH45u04Ysd5YtkJtMres_1J5Ni",
     resources: [
       { label: "PYQs", href: "https://drive.google.com/drive/folders/1zVAF9zU9u0AlfxXIC_3cwc7P6oLNe_Mo?usp=drive_link" },
@@ -163,7 +163,7 @@ const subjects = [
   {
     id: "value-ethics",
     title: "Value Ethics and Management",
-    image: "/bba-value-ethics.jpg",
+    image: "https://lh3.googleusercontent.com/d/1zGB0e5qQA_xlyelu9v6cP4wkN00ahi0D",
     href: "https://drive.google.com/drive/folders/1-lbhsFfH45u04Ysd5YtkJtMres_1J5Ni",
     resources: [
       { label: "PYQs", href: "https://drive.google.com/drive/folders/1sRpuIhokVLuh_F4lQHfRUI7brIxs0ddH?usp=drive_link" },
