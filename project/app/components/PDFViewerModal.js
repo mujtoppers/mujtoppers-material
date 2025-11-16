@@ -51,11 +51,24 @@ export default function PDFViewerModal({ file, onClose }) {
 
         {/* PDF Viewer */}
         <div className="relative w-full h-[calc(100%-5rem)] bg-white rounded-b-2xl shadow-2xl overflow-hidden">
+          <style jsx>{`
+            iframe {
+              pointer-events: auto;
+            }
+            /* Hide Google Drive toolbar and pop-out buttons */
+            :global(.ndfHFb-c4YZDc-GSQQnc-LgbsSe),
+            :global(.ndfHFb-c4YZDc-to915-LgbsSe),
+            :global([aria-label="Pop out"]),
+            :global([aria-label="Open in new window"]) {
+              display: none !important;
+            }
+          `}</style>
           <iframe
-            src={previewUrl}
+            src={`${previewUrl}&rm=minimal&embedded=true`}
             className="w-full h-full border-0"
             title={file.name}
             frameBorder="0"
+            sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
           />
         </div>
       </div>
