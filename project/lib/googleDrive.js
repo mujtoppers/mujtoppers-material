@@ -1,6 +1,11 @@
 const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_DRIVE_API_KEY;
 const BASE_URL = 'https://www.googleapis.com/drive/v3';
 
+// Debug: Log API key status (remove in production)
+if (typeof window !== 'undefined') {
+  console.log('API Key loaded:', !!API_KEY, 'First 10 chars:', API_KEY?.substring(0, 10));
+}
+
 /**
  * List files in a Google Drive folder
  * @param {string} folderId - The Google Drive folder ID
