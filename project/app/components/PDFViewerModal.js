@@ -68,7 +68,6 @@ export default function PDFViewerModal({ file, onClose }) {
             className="w-full h-full border-0"
             title={file.name}
             frameBorder="0"
-            sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
           />
         </div>
       </div>

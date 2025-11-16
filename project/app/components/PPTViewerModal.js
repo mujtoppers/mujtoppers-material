@@ -70,7 +70,6 @@ export default function PPTViewerModal({ file, onClose }) {
             frameBorder="0"
             allowFullScreen={true}
             referrerPolicy="no-referrer"
-            sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
           />
         </div>
       </div>
