@@ -17,7 +17,39 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'drive.google.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'docs.google.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.googleapis.com',
+      },
     ],
+  },
+  
+  // Headers for CSP and security
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'Content-Security-Policy',
+            value: [
+              "default-src 'self'",
+              "script-src 'self' 'unsafe-eval' 'unsafe-inline'",
+              "style-src 'self' 'unsafe-inline'",
+              "img-src 'self' data: blob: https://lh3.googleusercontent.com https://drive.google.com",
+              "font-src 'self' data:",
+              "connect-src 'self' https://www.googleapis.com https://drive.google.com https://docs.google.com",
+              "frame-src 'self' https://drive.google.com https://docs.google.com",
+              "media-src 'self' https://drive.google.com",
+            ].join('; '),
+          },
+        ],
+      },
+    ];
   },
   
   // Compression
