@@ -1,10 +1,13 @@
 const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_DRIVE_API_KEY;
 const BASE_URL = 'https://www.googleapis.com/drive/v3';
 
-// Debug: Log API key status (remove in production)
-if (typeof window !== 'undefined') {
-  console.log('API Key loaded:', !!API_KEY, 'First 10 chars:', API_KEY?.substring(0, 10));
-}
+// Debug logging
+console.log('🔑 API_KEY status:', {
+  exists: !!API_KEY,
+  type: typeof API_KEY,
+  length: API_KEY?.length,
+  firstChars: API_KEY?.substring(0, 10)
+});
 
 /**
  * List files in a Google Drive folder
@@ -13,13 +16,11 @@ if (typeof window !== 'undefined') {
  */
 export async function listFilesInFolder(folderId) {
   try {
-    // Debug all environment variables
-    console.log('All NEXT_PUBLIC vars:', Object.keys(process.env).filter(k => k.startsWith('NEXT_PUBLIC')));
-    console.log('API_KEY value:', API_KEY);
-    console.log('Direct access:', process.env.NEXT_PUBLIC_GOOGLE_DRIVE_API_KEY);
+    console.log('📂 Attempting to list files for folder:', folderId);
+    console.log('🔑 Using API_KEY:', API_KEY ? 'Present' : 'Missing');
     
     if (!API_KEY) {
-      console.error('Google Drive API key is not configured');
+      console.error('❌ Google Drive API key is not configured');
       return [];
     }
 
