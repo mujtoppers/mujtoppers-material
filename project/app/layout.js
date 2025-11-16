@@ -39,11 +39,16 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        {/* Content Security Policy */}
+        <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://lh3.googleusercontent.com https://drive.google.com; font-src 'self' data:; connect-src 'self' https://www.googleapis.com https://drive.google.com https://docs.google.com; frame-src 'self' https://drive.google.com https://docs.google.com; media-src 'self' https://drive.google.com;" />
+        
         {/* Preconnect to external domains for faster loading */}
         <link rel="preconnect" href="https://lh3.googleusercontent.com" />
         <link rel="preconnect" href="https://drive.google.com" />
+        <link rel="preconnect" href="https://www.googleapis.com" />
         <link rel="dns-prefetch" href="https://lh3.googleusercontent.com" />
         <link rel="dns-prefetch" href="https://drive.google.com" />
+        <link rel="dns-prefetch" href="https://www.googleapis.com" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} antialiased`}
