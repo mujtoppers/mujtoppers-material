@@ -64,7 +64,7 @@ export default function PDFViewerModal({ file, onClose }) {
             }
           `}</style>
           <iframe
-            src={`${previewUrl}&rm=minimal&embedded=true`}
+            src={`${previewUrl}?rm=minimal&embedded=true`}
             className="w-full h-full border-0"
             title={file.name}
             frameBorder="0"
