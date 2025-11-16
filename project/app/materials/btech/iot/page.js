@@ -1,8 +1,11 @@
 "use client";
 
 import Link from "next/link";
-
 import { useState } from "react";
+import DriveFolderBrowser from "@/app/components/DriveFolderBrowser";
+import PDFViewerModal from "@/app/components/PDFViewerModal";
+import PPTViewerModal from "@/app/components/PPTViewerModal";
+import { extractFileId } from "@/lib/googleDrive";
 
 const years = [
   {
@@ -51,6 +54,25 @@ const years = [
 
 export default function IOTPage() {
   const [openYear, setOpenYear] = useState(null);
+  const [browsing, setBrowsing] = useState(null);
+  const [selectedFile, setSelectedFile] = useState(null);
+  const [selectedPPT, setSelectedPPT] = useState(null);
+
+  const handleResourceClick = (resource, yearId) => {
+    const folderId = extractFileId(resource.href);
+    
+    if (folderId && resource.href.includes('drive.google.com')) {
+      setBrowsing({ 
+        yearId, 
+        resourceLabel: resource.label, 
+        folderId 
+      });
+    } else if (resource.href.startsWith('/')) {
+      window.location.href = resource.href;
+    } else {
+      window.open(resource.href, '_blank');
+    }
+  };
 
   return (
     <div className="relative min-h-screen overflow-hidden px-4 py-16 text-zinc-900 sm:px-8 lg:px-10">
@@ -128,25 +150,13 @@ export default function IOTPage() {
                           <span className="transition-colors duration-200 group-hover:text-zinc-900">
                             {resource.label}
                           </span>
-                          {resource.href.startsWith('/') ? (
-                            <Link
-                              href={resource.href}
-                              className="inline-flex items-center gap-1 text-xs font-semibold text-zinc-700 transition-colors duration-200 hover:text-orange-600"
-                            >
-                              Open
-                              <span aria-hidden="true">&gt;</span>
-                            </Link>
-                          ) : (
-                            <a
-                              href={resource.href}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-flex items-center gap-1 text-xs font-semibold text-zinc-700 transition-colors duration-200 hover:text-orange-600"
-                            >
-                              Open
-                              <span aria-hidden="true">&gt;</span>
-                            </a>
-                          )}
+                          <button
+                            onClick={() => handleResourceClick(resource, year.id)}
+                            className="inline-flex items-center gap-1 text-xs font-semibold text-zinc-700 transition-colors duration-200 hover:text-orange-600"
+                          >
+                            Open
+                            <span aria-hidden="true">&gt;</span>
+                          </button>
                         </li>
                       ))}
                     </ul>
@@ -165,6 +175,52 @@ export default function IOTPage() {
           &larr; Back to BTech branches
         </Link>
       </main>
+
+      {/* Drive Folder Browser Modal */}
+      {browsing && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-zinc-900/90 backdrop-blur-sm">
+          <div className="relative w-full h-full max-w-5xl max-h-screen p-4 sm:p-6">
+            <div className="flex items-center justify-between mb-4 bg-white rounded-t-2xl p-4 shadow-lg">
+              <div className="flex-1 min-w-0">
+                <h2 className="text-lg font-semibold text-zinc-900">
+                  {browsing.resourceLabel}
+                </h2>
+                <p className="text-sm text-zinc-500">Browse folders and files</p>
+              </div>
+              <button
+                onClick={() => setBrowsing(null)}
+                className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-zinc-100 hover:bg-zinc-200 text-zinc-700 font-bold transition"
+                aria-label="Close"
+              >
+                ✕
+              </button>
+            </div>
+            <div className="bg-white rounded-b-2xl shadow-2xl p-6 h-[calc(100%-5rem)] overflow-y-auto">
+              <DriveFolderBrowser 
+                folderId={browsing.folderId}
+                onFileClick={(file) => setSelectedFile(file)}
+                onPPTClick={(file) => setSelectedPPT(file)}
+              />
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* PDF Viewer Modal */}
+      {selectedFile && (
+        <PDFViewerModal 
+          file={selectedFile}
+          onClose={() => setSelectedFile(null)}
+        />
+      )}
+
+      {/* PPT Viewer Modal */}
+      {selectedPPT && (
+        <PPTViewerModal 
+          file={selectedPPT}
+          onClose={() => setSelectedPPT(null)}
+        />
+      )}
     </div>
   );
 }
