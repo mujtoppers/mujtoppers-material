@@ -13,6 +13,11 @@ if (typeof window !== 'undefined') {
  */
 export async function listFilesInFolder(folderId) {
   try {
+    // Debug all environment variables
+    console.log('All NEXT_PUBLIC vars:', Object.keys(process.env).filter(k => k.startsWith('NEXT_PUBLIC')));
+    console.log('API_KEY value:', API_KEY);
+    console.log('Direct access:', process.env.NEXT_PUBLIC_GOOGLE_DRIVE_API_KEY);
+    
     if (!API_KEY) {
       console.error('Google Drive API key is not configured');
       return [];
