@@ -19,7 +19,7 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "MUJ Hoppers - Your Semester Playbook",
+  title: "MUjToppers.in",
   description: "Curated study materials, PYQs, notes, and resources for MUJ students - First Year, BBA, and BTech",
   robots: "index, follow",
   openGraph: {
