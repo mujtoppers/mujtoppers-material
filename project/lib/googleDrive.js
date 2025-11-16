@@ -8,6 +8,11 @@ const BASE_URL = 'https://www.googleapis.com/drive/v3';
  */
 export async function listFilesInFolder(folderId) {
   try {
+    if (!API_KEY) {
+      console.error('Google Drive API key is not configured');
+      return [];
+    }
+
     const response = await fetch(
       `${BASE_URL}/files?q='${folderId}'+in+parents&key=${API_KEY}&fields=files(id,name,mimeType,size,createdTime,modifiedTime,iconLink,webViewLink,thumbnailLink)`,
       {
@@ -19,6 +24,8 @@ export async function listFilesInFolder(folderId) {
     );
 
     if (!response.ok) {
+      const errorData = await response.json().catch(() => ({}));
+      console.error('API Error:', response.status, errorData);
       throw new Error(`API Error: ${response.status}`);
     }
 
