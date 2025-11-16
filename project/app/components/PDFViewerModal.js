@@ -52,7 +52,7 @@ export default function PDFViewerModal({ file, onClose }) {
         {/* PDF Viewer */}
         <div className="relative w-full h-[calc(100%-5rem)] bg-white rounded-b-2xl shadow-2xl overflow-hidden">
           {/* Overlay to hide pop-out button */}
-          <div className="absolute top-0 right-0 w-12 h-12 bg-white z-10 pointer-events-none" />
+          <div className="absolute top-2 right-2 w-14 h-14 bg-zinc-800 z-10 pointer-events-none rounded" />
           <style jsx>{`
             iframe {
               pointer-events: auto;
