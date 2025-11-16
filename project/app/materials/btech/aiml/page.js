@@ -72,10 +72,8 @@ export default function AIMLPage() {
     } else if (resource.href.startsWith('/')) {
       // Internal link - navigate normally
       window.location.href = resource.href;
-    } else {
-      // External link - open in new tab
-      window.open(resource.href, '_blank');
     }
+    // Removed external link handling - all content should be through Drive browser
   };
 
   return (

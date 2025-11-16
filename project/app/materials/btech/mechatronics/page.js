@@ -69,9 +69,8 @@ export default function MECHATRONICSPage() {
       });
     } else if (resource.href.startsWith('/')) {
       window.location.href = resource.href;
-    } else {
-      window.open(resource.href, '_blank');
     }
+    // Removed external link handling
   };
 
   return (
