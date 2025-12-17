@@ -20,17 +20,17 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 w-full shadow-md py-3 px-4 sm:px-6 z-50 border-b border-black/10 bg-white/80 backdrop-blur-md font-sans">
+      <nav className="fixed top-0 left-0 w-full shadow-md py-3 px-4 sm:px-6 z-50 border-b border-black bg-white/80 backdrop-blur-md font-sans">
         <div className="max-w-[1400px] mx-auto w-full flex items-center justify-between">
           {/* Logo */}
-          <Link href="https://www.mujtoppers.in/" className="flex items-center">
+          <Link href="https://www.mujtoppers.in/" className="flex items-center ml-[-8px] sm:ml-[-12px]">
             <span className="text-lg font-bold text-black tracking-tight uppercase">
               MUJTOPPERS
             </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-5 mr-[-8px] sm:mr-[-12px]">
             <Link
               href="/"
               className="text-[16px] font-bold text-black hover:bg-black hover:text-white transition-all px-4 py-2 rounded-lg"
