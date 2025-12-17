@@ -32,7 +32,7 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-5 mr-[-8px] sm:mr-[-12px]">
             <Link
-              href="/"
+              href="https://about.mujtoppers.in/"
               className="text-[16px] font-bold text-black hover:bg-black hover:text-white transition-all px-4 py-2 rounded-lg"
             >
               Home
