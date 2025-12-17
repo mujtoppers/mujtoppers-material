@@ -14,7 +14,7 @@ const tracks = [
       "Lab manuals and viva decks",
       "Continuous assessment prep kits",
     ],
-    href: "/first-year",
+    href: "/materials/first-year",
     cta: "Explore cycles",
   },
   {
