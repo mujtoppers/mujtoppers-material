@@ -212,7 +212,7 @@ export default function PhysicsCycleSubjects() {
         </section>
 
         <Link
-          href="/first-year"
+          href="/materials/first-year"
           className="inline-flex w-fit items-center gap-2 self-center rounded-full border border-white/15 bg-zinc-900/80 px-5 py-2 text-sm font-semibold text-white transition-colors duration-200 hover:bg-zinc-900"
         >
           &larr; Back to cycles overview
