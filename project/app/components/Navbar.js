@@ -32,7 +32,7 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-5 mr-[-8px] sm:mr-[-12px]">
             <Link
-              href="https://about.mujtoppers.in/"
+              href="https://www.mujtoppers.in/"
               className="text-[16px] font-bold text-black hover:bg-black hover:text-white transition-all px-4 py-2 rounded-lg"
             >
               Home
@@ -123,7 +123,7 @@ export default function Navbar() {
         {/* Mobile Menu Links */}
         <div className="px-3 py-4 space-y-1">
           <Link
-            href="/"
+            href="https://www.mujtoppers.in/"
             onClick={() => setIsMenuOpen(false)}
             className="flex items-center gap-3 px-4 py-3.5 text-[15px] font-semibold text-gray-800 hover:bg-black hover:text-white rounded-xl transition-all duration-200"
           >
