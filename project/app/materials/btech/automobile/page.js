@@ -15,11 +15,11 @@ const years = [
     image: "https://lh3.googleusercontent.com/d/1XwwqRAAplENuLs43SSNAnd9Z9n-M8rN3",
     description: "Core engineering courses and fundamentals with curated lecture notes and PYQs.",
     resources: [
-      { label: "PYQs", href: "/coming-soon" },
-      { label: "Topper Notes", href: "/coming-soon" },
+      { label: "PYQs", href: "https://drive.google.com/drive/folders/1aNYuihjS6T5TknYMgC0kuu09kWqbb7xG?usp=drive_link" },
+      { label: "Topper Notes", href: "https://drive.google.com/drive/folders/1SSpEmrCsbEUoNjiGUez6yphRYMmWsDMF?usp=drive_link" },
       { label: "Video Playlists", href: "/coming-soon" },
       { label: "Roadmap", href: "/coming-soon" },
-      { label: "PPT Links", href: "/coming-soon" },
+      { label: "PPT Links", href: "https://drive.google.com/drive/folders/1SGp9ewWu0zdgCDKJZ4JfYxHHbQrkXIod?usp=drive_link" },
     ],
   },
   {
@@ -29,8 +29,8 @@ const years = [
     image: "https://lh3.googleusercontent.com/d/1cI7vkYb3k7DkKcoDY_7auDnQ9f7QImIM",
     description: "Advanced topics, specialization courses, and project-based learning materials.",
     resources: [
-      { label: "PYQs", href: "/coming-soon" },
-      { label: "Topper Notes", href: "/coming-soon" },
+      { label: "PYQs", href: "https://drive.google.com/drive/folders/1o7guWs-tMcxJUuANpCaHScTqlWZgi3W9?usp=drive_link" },
+      { label: "Topper Notes", href: "https://drive.google.com/drive/folders/19pEoc7JWfRr3Y0tmsSWDTveNWKGAp32I?usp=drive_link" },
       { label: "Video Playlists", href: "/coming-soon" },
       { label: "Roadmap", href: "/coming-soon" },
       { label: "PPT Links", href: "/coming-soon" },
@@ -43,8 +43,8 @@ const years = [
     image: "https://lh3.googleusercontent.com/d/1xLPmD47Q-mmDOuM0zt_Vu4hCwfDHJWl5",
     description: "Final year projects, placement prep, and advanced elective course materials.",
     resources: [
-      { label: "PYQs", href: "/coming-soon" },
-      { label: "Topper Notes", href: "/coming-soon" },
+      { label: "PYQs", href: "https://drive.google.com/drive/folders/1r-No_0JUOsHhISOYp2IMtNBmhoyfI_Kt?usp=drive_link" },
+      { label: "Topper Notes", href: "https://drive.google.com/drive/folders/1n6EQGVSNToTJ4Z9ldl-h3BCo9UZsNFRr?usp=drive_link" },
       { label: "Video Playlists", href: "/coming-soon" },
       { label: "Roadmap", href: "/coming-soon" },
       { label: "PPT Links", href: "/coming-soon" },

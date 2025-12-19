@@ -30,6 +30,13 @@ const branches = [
     href: "/materials/btech/cse",
   },
   {
+    id: "cybersecurity",
+    title: "CYBER SECURITY",
+    icon: "📊",
+    image: "https://lh3.googleusercontent.com/d/1rmvqrwNqz-9q9TV0-6mx_IH8bhSbIniM",
+    href: "/materials/btech/cybersecurity",
+  },
+  {
     id: "dse",
     title: "DSE",
     icon: "📊",

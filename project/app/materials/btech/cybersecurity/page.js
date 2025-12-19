@@ -15,11 +15,11 @@ const years = [
     image: "https://lh3.googleusercontent.com/d/1XwwqRAAplENuLs43SSNAnd9Z9n-M8rN3",
     description: "Core engineering courses and fundamentals with curated lecture notes and PYQs.",
     resources: [
-      { label: "PYQs", href: "https://drive.google.com/drive/folders/1ZrQBaC8pi14iL5GGliXtFBaPAYJQQ57g?usp=drive_link" },
-      { label: "Topper Notes", href: "https://drive.google.com/drive/folders/1sft_Zztj7y7iBAqjo-TONecFzkVBxRwQ?usp=drive_link" },
+      { label: "PYQs", href: "https://drive.google.com/drive/folders/1Kkgy5Xl19I7K7Y-FO7rJWTfTiMLzKJ7k?usp=drive_link" },
+      { label: "Topper Notes", href: "https://drive.google.com/drive/folders/1QKekI0q6nQMX_mkwLwcd3kQQhXfa1Vi6?usp=drive_link" },
       { label: "Video Playlists", href: "/coming-soon" },
       { label: "Roadmap", href: "/coming-soon" },
-      { label: "PPT Links", href: "https://drive.google.com/drive/folders/1ZrQBaC8pi14iL5GGliXtFBaPAYJQQ57g?usp=drive_link" },
+      { label: "PPT Links", href: "https://drive.google.com/drive/folders/1qoeF0A1MtaphE_hryCCfYih0v7tKf2rU?usp=drive_link" },
     ],
   },
   {
@@ -29,8 +29,8 @@ const years = [
     image: "https://lh3.googleusercontent.com/d/1cI7vkYb3k7DkKcoDY_7auDnQ9f7QImIM",
     description: "Advanced topics, specialization courses, and project-based learning materials.",
     resources: [
-      { label: "PYQs", href: "https://drive.google.com/drive/folders/1zKQzUXBoXPtIM6kJ8848HSk1gvz3pQ8V?usp=drive_link" },
-      { label: "Topper Notes", href: "https://drive.google.com/drive/folders/1_6TXT1wyF06ziT0Di39SQyp_KAkAqhT1?usp=drive_link" },
+      { label: "PYQs", href: "/coming-soon" },
+      { label: "Topper Notes", href: "/coming-soon" },
       { label: "Video Playlists", href: "/coming-soon" },
       { label: "Roadmap", href: "/coming-soon" },
       { label: "PPT Links", href: "/coming-soon" },
@@ -43,8 +43,8 @@ const years = [
     image: "https://lh3.googleusercontent.com/d/1xLPmD47Q-mmDOuM0zt_Vu4hCwfDHJWl5",
     description: "Final year projects, placement prep, and advanced elective course materials.",
     resources: [
-      { label: "PYQs", href: "https://drive.google.com/drive/folders/1aVPxo0XCaATQgY6WSZhZ_KzyZtc6jVhH?usp=drive_link" },
-      { label: "Topper Notes", href: "https://drive.google.com/drive/folders/1oa7z2uVYbEInF1tdKZTk3IONLuwCixPQ?usp=drive_link" },
+      { label: "PYQs", href: "/coming-soon" },
+      { label: "Topper Notes", href: "/coming-soon" },
       { label: "Video Playlists", href: "/coming-soon" },
       { label: "Roadmap", href: "/coming-soon" },
       { label: "PPT Links", href: "/coming-soon" },
@@ -52,7 +52,7 @@ const years = [
   },
 ];
 
-export default function MECHANICALPage() {
+export default function CYBERSECURITYPage() {
   const [openYear, setOpenYear] = useState(null);
   const [browsing, setBrowsing] = useState(null);
   const [selectedFile, setSelectedFile] = useState(null);
@@ -88,12 +88,12 @@ export default function MECHANICALPage() {
           <h1 className="text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
             <span className="animate-word-1 inline-block text-zinc-900">Explore</span>
             {" "}
-            <span className="animate-word-2 inline-block text-gradient-orange-underline">MECHANICAL</span>
+            <span className="animate-word-2 inline-block text-gradient-orange-underline">CYBER SECURITY</span>
             {" "}
             <span className="animate-word-3 inline-block text-zinc-900">Years</span>
           </h1>
           <p className="animate-fade-in-up text-sm leading-relaxed text-zinc-600 sm:text-base">
-            Pick your year and dive into curated mechanical engineering study resources, notes, and more.
+            Pick your year and dive into curated CYBER SECURITY study resources, notes, and more.
           </p>
         </section>
 
