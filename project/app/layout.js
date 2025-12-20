@@ -25,7 +25,7 @@ export const metadata = {
   robots: "index, follow",
   openGraph: {
     type: "website",
-    title: "MUJ Hoppers - Your Semester Playbook",
+    title: "MUjtoppers.in",
     description: "Curated study materials, PYQs, notes, and resources for MUJ students",
   },
 };
