@@ -38,7 +38,7 @@ export default function Navbar() {
               Home
             </Link>
             <Link
-              href="https://mujtoppers.vercel.app/"
+              href="https://material.mujtoppers.in "
               className="text-[16px] font-bold text-black hover:bg-black hover:text-white transition-all px-4 py-2 rounded-lg"
             >
               Material
@@ -133,7 +133,7 @@ export default function Navbar() {
             Home
           </Link>
           <Link
-            href="https://mujtoppers.vercel.app/"
+            href="https://material.mujtoppers.in"
             onClick={() => setIsMenuOpen(false)}
             className="flex items-center gap-3 px-4 py-3.5 text-[15px] font-semibold text-gray-800 hover:bg-black hover:text-white rounded-xl transition-all duration-200"
           >

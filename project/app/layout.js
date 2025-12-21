@@ -20,12 +20,12 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "MUjToppers.in",
+  title: "MUJ Toppers",
   description: "Curated study materials, PYQs, notes, and resources for MUJ students - First Year, BBA, and BTech",
   robots: "index, follow",
   openGraph: {
     type: "website",
-    title: "MUjtoppers.in",
+    title: "MUJ Toppers",
     description: "Curated study materials, PYQs, notes, and resources for MUJ students",
   },
 };
