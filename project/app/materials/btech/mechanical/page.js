@@ -33,7 +33,7 @@ const years = [
       { label: "Topper Notes", href: "https://drive.google.com/drive/folders/1_6TXT1wyF06ziT0Di39SQyp_KAkAqhT1?usp=drive_link" },
       { label: "Video Playlists", href: "/coming-soon" },
       { label: "Roadmap", href: "/coming-soon" },
-      { label: "PPT Links", href: "/coming-soon" },
+      { label: "PPT Links", href: "https://drive.google.com/drive/folders/1x1vZmUoTjCo_X6LOUFZHuHbj5NeeM6VQ?usp=drive_link" },
     ],
   },
   {
