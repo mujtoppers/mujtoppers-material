@@ -275,7 +275,8 @@ export default function BBASecondYearSubjects() {
             return (
             <article
               key={subject.id}
-              className={`relative flex h-full flex-col overflow-visible rounded-3xl border border-gray-200 bg-white text-zinc-800 shadow-lg shadow-gray-900/5 transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:border-orange-500 hover:shadow-orange-100/50 ${openSubject === subject.id ? "z-30" : "z-0"}`}
+              onClick={() => setOpenSubject((prev) => (prev === subject.id ? null : subject.id))}
+              className={`relative flex h-full flex-col overflow-visible rounded-3xl border border-gray-200 bg-white text-zinc-800 shadow-lg shadow-gray-900/5 transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:border-orange-500 hover:shadow-orange-100/50 cursor-pointer ${openSubject === subject.id ? "z-30" : "z-0"}`}
             >
               <div className="relative h-48 w-full overflow-hidden rounded-t-3xl">
                 <img
@@ -294,7 +295,6 @@ export default function BBASecondYearSubjects() {
                 </h2>
                 <button
                   type="button"
-                  onClick={() => setOpenSubject((prev) => (prev === subject.id ? null : subject.id))}
                   className="flex items-center justify-between gap-3 rounded-2xl border border-orange-200 bg-orange-50/50 px-4 py-3 text-sm font-semibold text-zinc-700 transition duration-200 hover:border-orange-400 hover:bg-orange-50"
                 >
                   <span>Resource bundles</span>
@@ -304,7 +304,9 @@ export default function BBASecondYearSubjects() {
                 </button>
               </div>
               {openSubject === subject.id && (
-                <div className={`absolute left-6 right-6 z-40 duration-200 ${
+                <div 
+                  onClick={(e) => e.stopPropagation()}
+                  className={`absolute left-6 right-6 z-40 duration-200 ${
                   isBottomRow 
                     ? 'bottom-[calc(40%-1rem)] animate-in fade-in slide-in-from-bottom-2' 
                     : 'top-[calc(95%-1rem)] animate-in fade-in slide-in-from-top-2'

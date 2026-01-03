@@ -105,7 +105,8 @@ export default function CCEPage() {
             return (
             <article
               key={year.id}
-              className={`relative flex h-full flex-col overflow-visible rounded-3xl border border-gray-200 bg-white text-zinc-800 shadow-lg shadow-gray-900/5 transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:border-orange-500 hover:shadow-orange-100/50 ${openYear === year.id ? "z-30" : "z-0"}`}
+              onClick={() => setOpenYear((prev) => (prev === year.id ? null : year.id))}
+              className={`relative flex h-full flex-col overflow-visible rounded-3xl border border-gray-200 bg-white text-zinc-800 shadow-lg shadow-gray-900/5 transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:border-orange-500 hover:shadow-orange-100/50 cursor-pointer ${openYear === year.id ? "z-30" : "z-0"}`}
             >
               {/* Image */}
               <div className="relative h-48 w-full overflow-hidden rounded-t-3xl">
@@ -123,7 +124,6 @@ export default function CCEPage() {
                 </h2>
                 <button
                   type="button"
-                  onClick={() => setOpenYear((prev) => (prev === year.id ? null : year.id))}
                   className="flex items-center justify-between gap-3 rounded-2xl border border-orange-200 bg-orange-50/50 px-4 py-3 text-sm font-semibold text-zinc-700 transition duration-200 hover:border-orange-400 hover:bg-orange-50"
                 >
                   <span>Resource bundles</span>
@@ -134,7 +134,9 @@ export default function CCEPage() {
               </div>
               
               {openYear === year.id && (
-                <div className={`absolute left-6 right-6 z-40 duration-200 ${
+                <div 
+                  onClick={(e) => e.stopPropagation()}
+                  className={`absolute left-6 right-6 z-40 duration-200 ${
                   isBottomRow 
                     ? 'bottom-[calc(40%-1rem)] animate-in fade-in slide-in-from-bottom-2' 
                     : 'top-[calc(95%-1rem)] animate-in fade-in slide-in-from-top-2'
