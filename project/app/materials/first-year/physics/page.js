@@ -55,7 +55,7 @@ const subjects = [
     resources: [
       { label: "PYQs", href: "https://drive.google.com/drive/folders/1jxiFP_HFpCYDSPb2hwd2wJHZrYbgqPPz?usp=drive_link" },
       { label: "Topper Notes", href: "https://drive.google.com/file/d/1s0PYtdlf8fIZvTwhY9I2LubZwSPWFgOH/view?usp=drive_link" },
-      { label: "Video Playlists", href: "https://www.youtube.com/playlist?list=PLB_MQaW6RcuukNazriXq2TZYTyq8D_5uR" },
+      { label: "Video Playlists", href: "/coming-soon" },
       { label: "Roadmap", href: "https://drive.google.com/file/d/1T5zICF1dFnYApzuu1nyw1vW_LbgAUasf/view?usp=sharing" },
       { label: "PPT Links", href: "https://drive.google.com/drive/folders/1JgGFDWvFm9N3Ur8K8-ylwTEKR55RqwNq?usp=drive_link" },
     ],
@@ -68,7 +68,7 @@ const subjects = [
     resources: [
       { label: "PYQs", href: "https://drive.google.com/drive/folders/1jxiFP_HFpCYDSPb2hwd2wJHZrYbgqPPz?usp=drive_link" },
       { label: "Topper Notes", href: "https://drive.google.com/file/d/1s0PYtdlf8fIZvTwhY9I2LubZwSPWFgOH/view?usp=drive_link" },
-      { label: "Video Playlists", href: "https://www.youtube.com/playlist?list=PLB_MQaW6RcuukNazriXq2TZYTyq8D_5uR" },
+      { label: "Video Playlists", href: "/coming-soon" },
       { label: "Roadmap", href: "https://drive.google.com/file/d/1T5zICF1dFnYApzuu1nyw1vW_LbgAUasf/view?usp=sharing" },
       { label: "PPT Links", href: "https://drive.google.com/drive/folders/1JgGFDWvFm9N3Ur8K8-ylwTEKR55RqwNq?usp=drive_link" },
     ],
@@ -105,6 +105,8 @@ export default function PhysicsCycleSubjects() {
       });
     } else if (resource.href.startsWith('/')) {
       window.location.href = resource.href;
+    } else {
+      window.open(resource.href, '_blank');
     }
   };
 
@@ -190,18 +192,18 @@ export default function PhysicsCycleSubjects() {
                       {subject.resources.map((resource) => (
                         <li
                           key={resource.label}
-                          className="group flex items-center justify-between gap-3 rounded-xl px-3 py-2 transition duration-200 hover:bg-orange-50"
+                          onClick={() => handleResourceClick(resource, subject.id)}
+                          className="group flex cursor-pointer items-center justify-between gap-3 rounded-xl px-3 py-2 transition duration-200 hover:bg-orange-50"
                         >
                           <span className="transition-colors duration-200 group-hover:text-zinc-900">
                             {resource.label}
                           </span>
-                          <button
-                            onClick={() => handleResourceClick(resource, subject.id)}
-                            className="inline-flex items-center gap-1 text-xs font-semibold text-zinc-700 transition-colors duration-200 hover:text-orange-600"
+                          <span
+                            className="inline-flex items-center gap-1 text-xs font-semibold text-zinc-700 transition-colors duration-200 group-hover:text-orange-600"
                           >
                             Open
                             <span aria-hidden="true">&gt;</span>
-                          </button>
+                          </span>
                         </li>
                       ))}
                     </ul>

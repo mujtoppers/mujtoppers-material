@@ -72,8 +72,9 @@ export default function AIMLPage() {
     } else if (resource.href.startsWith('/')) {
       // Internal link - navigate normally
       window.location.href = resource.href;
+    } else {
+      window.open(resource.href, '_blank');
     }
-    // Removed external link handling - all content should be through Drive browser
   };
 
   return (
@@ -153,18 +154,18 @@ export default function AIMLPage() {
                       {year.resources.map((resource) => (
                         <li
                           key={resource.label}
-                          className="group flex items-center justify-between gap-3 rounded-xl px-3 py-2 transition duration-200 hover:bg-orange-50"
+                          onClick={() => handleResourceClick(resource, year.id)}
+                          className="group flex cursor-pointer items-center justify-between gap-3 rounded-xl px-3 py-2 transition duration-200 hover:bg-orange-50"
                         >
                           <span className="transition-colors duration-200 group-hover:text-zinc-900">
                             {resource.label}
                           </span>
-                          <button
-                            onClick={() => handleResourceClick(resource, year.id)}
-                            className="inline-flex items-center gap-1 text-xs font-semibold text-zinc-700 transition-colors duration-200 hover:text-orange-600"
+                          <span
+                            className="inline-flex items-center gap-1 text-xs font-semibold text-zinc-700 transition-colors duration-200 group-hover:text-orange-600"
                           >
                             Open
                             <span aria-hidden="true">&gt;</span>
-                          </button>
+                          </span>
                         </li>
                       ))}
                     </ul>
