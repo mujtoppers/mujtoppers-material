@@ -38,7 +38,7 @@ const subjects = [
     id: "psuc",
     title: "PSUC",
     image: "https://lh3.googleusercontent.com/d/1qNmcdINQ1sgw6dVt2AaUsF2z3-ucWqNZ",
-    href: "https://www.mujtoppers.in/branch/first/subjects/MATLAB",
+    href: "https://www.mujtoppers.in/branch/first/subjects/PhysicsScienceandUseofComputers",
     resources: [
       { label: "PYQs", href: "https://drive.google.com/drive/folders/1xSFhkhFRR1PH4ditPRf_FVIkfdK4JkRa?usp=drive_link" },
       { label: "Topper Notes", href: "https://drive.google.com/drive/folders/1sg0akPy_zBDDKiWKU_8pmuOTLlgyNtkq?usp=drive_link" },
@@ -51,7 +51,7 @@ const subjects = [
     id: "wcs",
     title: "WCS",
     image: "https://lh3.googleusercontent.com/d/1n3ruALsALtnMSccMInUch_83O7MXDKgG",
-    href: "https://www.mujtoppers.in/branch/first/subjects/BiologyForEngineers",
+    href: "https://www.mujtoppers.in/branch/first/subjects/WorkshopandComputerSkills",
     resources: [
       { label: "PYQs", href: "https://drive.google.com/drive/folders/1jxiFP_HFpCYDSPb2hwd2wJHZrYbgqPPz?usp=drive_link" },
       { label: "Topper Notes", href: "https://drive.google.com/file/d/1s0PYtdlf8fIZvTwhY9I2LubZwSPWFgOH/view?usp=drive_link" },
@@ -64,7 +64,7 @@ const subjects = [
     id: "evs",
     title: "EVS",
     image: "https://lh3.googleusercontent.com/d/1fC03trFyiq4_laftnwfPbJ8OR8uCJMU_",
-    href: "https://www.mujtoppers.in/branch/first/subjects/BiologyForEngineers",
+    href: "https://www.mujtoppers.in/branch/first/subjects/EnvironmentalScience",
     resources: [
       { label: "PYQs", href: "https://drive.google.com/drive/folders/1jxiFP_HFpCYDSPb2hwd2wJHZrYbgqPPz?usp=drive_link" },
       { label: "Topper Notes", href: "https://drive.google.com/file/d/1s0PYtdlf8fIZvTwhY9I2LubZwSPWFgOH/view?usp=drive_link" },
@@ -86,6 +86,33 @@ const subjects = [
       { label: "PPT Links", href: "https://drive.google.com/drive/folders/1JgGFDWvFm9N3Ur8K8-ylwTEKR55RqwNq?usp=drive_link" },
     ],
   },
+  {
+    id: "MATLAB",
+    title: "MATLAB",
+    image: "https://lh3.googleusercontent.com/d/1VI8XbXhDGD3FpWEA6smBB6PzWQTEw9oj",
+    href: "https://www.mujtoppers.in/branch/first/subjects/BiologyForEngineers",
+    resources: [
+      { label: "PYQs", href: "https://drive.google.com/drive/u/0/folders/1d75bxh_L7JvAKNheNZ3c6YOeqikO1CTB" },
+      { label: "Topper Notes", href: "https://drive.google.com/drive/u/0/folders/1VVt2FfnbjhGTebrL7ditH--K_BfWMJZa" },
+      { label: "Video Playlists", href: "https://www.youtube.com/playlist?list=PLB_MQaW6Rcut-VLlP29zTzka8hs24bqJ9" },
+      { label: "Roadmap", href: "/coming-soon" },
+      { label: "PPT Links", href: "https://drive.google.com/drive/folders/1A6qZYx7bSjd2DpnLz4XRFOkA0YajIaDm" },
+    ],
+  },
+  {
+    id: "Engineering Materials and Mechanics",
+    title: "Engineering Materials and Mechanics",
+    image: "https://lh3.googleusercontent.com/d/19_UNq8im_qVEyvqlxprzVc8yCBsdL2tA",
+    href: "https://www.mujtoppers.in/branch/first/subjects/BiologyForEngineers",
+    resources: [
+      { label: "PYQs", href: "https://drive.google.com/drive/u/0/folders/1w54A2Vd87DQtFwEoUuy8m0nX9rANb4RA" },
+      { label: "Topper Notes", href: "https://drive.google.com/drive/u/0/folders/1nxBvjZVxG2QL4W_B8skkg4z-VYibmF7n" },
+      { label: "Video Playlists", href: "https://www.youtube.com/playlist?list=PLB_MQaW6RcutYOUEk_7Je8K-Z3ixz_4TS" },
+      { label: "Roadmap", href: "/coming-soon" },
+      { label: "PPT Links", href: "https://drive.google.com/drive/folders/1WonGMHUbrQ_LnZrF024GMbiYZxuNUk_Z" },
+    ],
+  },
+  
 ];
 
 export default function PhysicsCycleSubjects() {
