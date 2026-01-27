@@ -53,11 +53,11 @@ const subjects = [
     image: "https://lh3.googleusercontent.com/d/1n3ruALsALtnMSccMInUch_83O7MXDKgG",
     href: "https://www.mujtoppers.in/branch/first/subjects/WorkshopandComputerSkills",
     resources: [
-      { label: "PYQs", href: "https://drive.google.com/drive/folders/1jxiFP_HFpCYDSPb2hwd2wJHZrYbgqPPz?usp=drive_link" },
-      { label: "Topper Notes", href: "https://drive.google.com/file/d/1s0PYtdlf8fIZvTwhY9I2LubZwSPWFgOH/view?usp=drive_link" },
+      { label: "PYQs", href: "https://drive.google.com/drive/folders/1UU1oz91PhMZ5l2EdY9biGW7y6NorYtuo?usp=drive_link" },
+      { label: "Topper Notes", href: "https://drive.google.com/drive/folders/1k9ByGWxq_vYW9qqd5I8D_hIfe8p2QN2p?usp=drive_link" },
       { label: "Video Playlists", href: "/coming-soon" },
-      { label: "Roadmap", href: "https://drive.google.com/file/d/1T5zICF1dFnYApzuu1nyw1vW_LbgAUasf/view?usp=sharing" },
-      { label: "PPT Links", href: "https://drive.google.com/drive/folders/1JgGFDWvFm9N3Ur8K8-ylwTEKR55RqwNq?usp=drive_link" },
+      { label: "Roadmap", href: "/coming-soon" },
+      { label: "PPT Links", href: "https://drive.google.com/drive/folders/1DcBG73Oy-yFUONh1-IiTtcnGGHjdThPN?usp=drive_link" },
     ],
   },
   {
@@ -66,11 +66,11 @@ const subjects = [
     image: "https://lh3.googleusercontent.com/d/1fC03trFyiq4_laftnwfPbJ8OR8uCJMU_",
     href: "https://www.mujtoppers.in/branch/first/subjects/EnvironmentalScience",
     resources: [
-      { label: "PYQs", href: "https://drive.google.com/drive/folders/1jxiFP_HFpCYDSPb2hwd2wJHZrYbgqPPz?usp=drive_link" },
-      { label: "Topper Notes", href: "https://drive.google.com/file/d/1s0PYtdlf8fIZvTwhY9I2LubZwSPWFgOH/view?usp=drive_link" },
+      { label: "PYQs", href: "https://drive.google.com/drive/folders/1hQJghqn4Vf-QaqwhguMY4ftBO7eW8VHD?usp=drive_link" },
+      { label: "Topper Notes", href: "https://drive.google.com/drive/folders/1cgnHpUK_ETAGC0GGl8IwZABdXvyjhMP7?usp=drive_link" },
       { label: "Video Playlists", href: "/coming-soon" },
-      { label: "Roadmap", href: "https://drive.google.com/file/d/1T5zICF1dFnYApzuu1nyw1vW_LbgAUasf/view?usp=sharing" },
-      { label: "PPT Links", href: "https://drive.google.com/drive/folders/1JgGFDWvFm9N3Ur8K8-ylwTEKR55RqwNq?usp=drive_link" },
+      { label: "Roadmap", href: "/coming-soon" },
+      { label: "PPT Links", href: "https://drive.google.com/drive/folders/1jQLTV6Ja396boqgfkMEaah7Seux3YE7Z?usp=drive_link" },
     ],
   },
   {
@@ -80,9 +80,9 @@ const subjects = [
     href: "https://www.mujtoppers.in/branch/first/subjects/BiologyForEngineers",
     resources: [
       { label: "PYQs", href: "https://drive.google.com/drive/folders/1jxiFP_HFpCYDSPb2hwd2wJHZrYbgqPPz?usp=drive_link" },
-      { label: "Topper Notes", href: "https://drive.google.com/file/d/1s0PYtdlf8fIZvTwhY9I2LubZwSPWFgOH/view?usp=drive_link" },
+      { label: "Topper Notes", href: "https://drive.google.com/drive/folders/1a1onO670Zw09Ko-PNrISSzP97AI1xZSl?usp=drive_link"},
       { label: "Video Playlists", href: "https://www.youtube.com/playlist?list=PLB_MQaW6RcuukNazriXq2TZYTyq8D_5uR" },
-      { label: "Roadmap", href: "https://drive.google.com/file/d/1T5zICF1dFnYApzuu1nyw1vW_LbgAUasf/view?usp=sharing" },
+      { label: "Roadmap", href: "/coming-soon" },
       { label: "PPT Links", href: "https://drive.google.com/drive/folders/1JgGFDWvFm9N3Ur8K8-ylwTEKR55RqwNq?usp=drive_link" },
     ],
   },
