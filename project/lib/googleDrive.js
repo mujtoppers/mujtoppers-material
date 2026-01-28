@@ -111,7 +111,20 @@ export function isPPT(mimeType) {
  * @returns {string} Preview URL
  */
 export function getPDFPreviewUrl(fileId) {
+  // Use Google Docs viewer - works better with third-party cookie restrictions on Android
+  // This embeds via docs.google.com which has better cross-origin compatibility
   return `https://drive.google.com/file/d/${fileId}/preview`;
+}
+
+/**
+ * Get alternative PDF preview URL using Google Docs Viewer
+ * Better compatibility with Android Chrome's cookie restrictions
+ * @param {string} fileId - The Google Drive file ID
+ * @returns {string} Preview URL
+ */
+export function getAlternativePDFUrl(fileId) {
+  const driveUrl = `https://drive.google.com/uc?id=${fileId}`;
+  return `https://docs.google.com/viewer?url=${encodeURIComponent(driveUrl)}&embedded=true`;
 }
 
 /**

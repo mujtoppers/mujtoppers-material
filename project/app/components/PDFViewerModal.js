@@ -1,10 +1,17 @@
 "use client";
 
-import { useEffect } from "react";
-import { getPDFPreviewUrl } from "@/lib/googleDrive";
+import { useEffect, useState } from "react";
+import { getPDFPreviewUrl, getAlternativePDFUrl } from "@/lib/googleDrive";
 
 export default function PDFViewerModal({ file, onClose }) {
+  const [iframeKey, setIframeKey] = useState(Date.now());
+  const [isAndroid, setIsAndroid] = useState(false);
+
   useEffect(() => {
+    // Detect Android - use alternative viewer automatically
+    const android = /Android/i.test(navigator.userAgent);
+    setIsAndroid(android);
+    
     // Prevent body scroll when modal is open
     document.body.style.overflow = "hidden";
     
@@ -20,9 +27,17 @@ export default function PDFViewerModal({ file, onClose }) {
     };
   }, [onClose]);
 
+  // Reset state when file changes
+  useEffect(() => {
+    setIframeKey(Date.now());
+  }, [file?.id]);
+
   if (!file) return null;
 
-  const previewUrl = getPDFPreviewUrl(file.id);
+  // Automatically use alternative viewer on Android, standard on others
+  const previewUrl = isAndroid 
+    ? getAlternativePDFUrl(file.id)
+    : `${getPDFPreviewUrl(file.id)}?rm=minimal&embedded=true`;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-zinc-900/90 backdrop-blur-sm">
@@ -51,8 +66,10 @@ export default function PDFViewerModal({ file, onClose }) {
 
         {/* PDF Viewer */}
         <div className="relative w-full h-[calc(100%-5rem)] bg-white rounded-b-2xl shadow-2xl overflow-hidden">
-          {/* Overlay to hide pop-out button */}
-          <div className="absolute top-2 right-2 w-14 h-14 bg-zinc-800 z-10 pointer-events-none rounded" />
+          {/* Overlay to hide pop-out button - only for standard viewer */}
+          {!isAndroid && (
+            <div className="absolute top-2 right-2 w-14 h-14 bg-zinc-800 z-10 pointer-events-none rounded" />
+          )}
           <style jsx>{`
             iframe {
               pointer-events: auto;
@@ -65,11 +82,16 @@ export default function PDFViewerModal({ file, onClose }) {
               display: none !important;
             }
           `}</style>
+          
           <iframe
-            src={`${previewUrl}?rm=minimal&embedded=true`}
+            key={iframeKey}
+            src={previewUrl}
             className="w-full h-full border-0"
             title={file.name}
             frameBorder="0"
+            allow="autoplay"
+            referrerPolicy="no-referrer-when-downgrade"
+            loading="eager"
           />
         </div>
       </div>
