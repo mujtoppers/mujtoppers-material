@@ -1,9 +1,11 @@
 "use client";
 
-import { useEffect } from "react";
-import { getPPTPreviewUrl } from "@/lib/googleDrive";
+import { useEffect, useState } from "react";
+import { getAlternativePPTUrl } from "@/lib/googleDrive";
 
 export default function PPTViewerModal({ file, onClose }) {
+  const [iframeKey, setIframeKey] = useState(Date.now());
+
   useEffect(() => {
     // Prevent body scroll when modal is open
     document.body.style.overflow = "hidden";
@@ -20,9 +22,15 @@ export default function PPTViewerModal({ file, onClose }) {
     };
   }, [onClose]);
 
+  // Reset state when file changes
+  useEffect(() => {
+    setIframeKey(Date.now());
+  }, [file?.id]);
+
   if (!file) return null;
 
-  const previewUrl = getPPTPreviewUrl(file.id);
+  // Use Google Docs viewer for all devices - better cookie handling
+  const previewUrl = getAlternativePPTUrl(file.id);
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-zinc-900/90 backdrop-blur-sm">
@@ -51,27 +59,19 @@ export default function PPTViewerModal({ file, onClose }) {
 
         {/* Presentation Viewer */}
         <div className="relative w-full h-[calc(100%-5rem)] bg-white rounded-b-2xl shadow-2xl overflow-hidden">
-          {/* Overlay to hide pop-out button */}
-          <div className="absolute top-2 right-2 w-14 h-14 bg-zinc-700 z-10 pointer-events-none rounded" />
-          <style jsx>{`
-            iframe {
-              pointer-events: auto;
-            }
-            /* Hide Google Drive toolbar and pop-out buttons */
-            :global(.ndfHFb-c4YZDc-GSQQnc-LgbsSe),
-            :global(.ndfHFb-c4YZDc-to915-LgbsSe),
-            :global([aria-label="Pop out"]),
-            :global([aria-label="Open in new window"]) {
-              display: none !important;
-            }
-          `}</style>
+          {/* Branded overlay to hide pop-out button */}
+          <div className="absolute top-0 right-0 z-10 pointer-events-none bg-zinc-800 p-2 rounded-bl-lg shadow-lg">
+            <img src="/favicon.ico" alt="MujToppers" className="w-10 h-10" />
+          </div>
           <iframe
-            src={`${previewUrl}?rm=minimal&embedded=true`}
+            key={iframeKey}
+            src={previewUrl}
             className="w-full h-full border-0"
             title={file.name}
             frameBorder="0"
-            allowFullScreen={true}
-            referrerPolicy="no-referrer"
+            allow="autoplay"
+            referrerPolicy="no-referrer-when-downgrade"
+            loading="eager"
           />
         </div>
       </div>

@@ -138,6 +138,17 @@ export function getPPTPreviewUrl(fileId) {
 }
 
 /**
+ * Get alternative PPT preview URL using Google Docs Viewer
+ * Better compatibility with Android Chrome's cookie restrictions
+ * @param {string} fileId - The Google Drive file ID
+ * @returns {string} Preview URL
+ */
+export function getAlternativePPTUrl(fileId) {
+  const driveUrl = `https://drive.google.com/uc?id=${fileId}`;
+  return `https://docs.google.com/viewer?url=${encodeURIComponent(driveUrl)}&embedded=true`;
+}
+
+/**
  * Extract file ID from Google Drive URL
  * @param {string} url - Google Drive URL
  * @returns {string|null} File ID or null
