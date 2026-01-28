@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { getAlternativePDFUrl } from "@/lib/googleDrive";
+import { getPDFPreviewUrl } from "@/lib/googleDrive";
 
 export default function PDFViewerModal({ file, onClose }) {
   const [iframeKey, setIframeKey] = useState(Date.now());
@@ -29,8 +29,8 @@ export default function PDFViewerModal({ file, onClose }) {
 
   if (!file) return null;
 
-  // Use Google Docs viewer for all devices - better cookie handling
-  const previewUrl = getAlternativePDFUrl(file.id);
+  // Use Drive preview - works with view-only permissions
+  const previewUrl = `${getPDFPreviewUrl(file.id)}?rm=minimal&embedded=true`;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-zinc-900/90 backdrop-blur-sm">
@@ -47,6 +47,16 @@ export default function PDFViewerModal({ file, onClose }) {
             </p>
           </div>
           <div className="flex items-center gap-2 ml-4">
+            {/* Fallback link to open in Google Drive */}
+            <a
+              href={`https://drive.google.com/file/d/${file.id}/view`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-3 h-10 rounded-lg bg-blue-100 hover:bg-blue-200 text-blue-700 text-sm font-medium transition"
+              title="Open in Google Drive"
+            >
+              Can't see? Open in Drive ↗
+            </a>
             <button
               onClick={onClose}
               className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-zinc-100 hover:bg-zinc-200 text-zinc-700 font-bold transition"
