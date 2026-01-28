@@ -59,8 +59,10 @@ export default function PDFViewerModal({ file, onClose }) {
 
         {/* PDF Viewer */}
         <div className="relative w-full h-[calc(100%-5rem)] bg-white rounded-b-2xl shadow-2xl overflow-hidden">
-          {/* Overlay to hide pop-out button */}
-          <div className="absolute top-2 right-2 w-14 h-14 bg-zinc-800 z-10 pointer-events-none rounded" />
+          {/* Branded overlay to hide pop-out button */}
+          <div className="absolute top-0 right-0 z-10 pointer-events-none bg-zinc-800 p-2 rounded-bl-lg shadow-lg">
+            <img src="/favicon.ico" alt="MujToppers" className="w-10 h-10" />
+          </div>
           <iframe
             key={iframeKey}
             src={previewUrl}
