@@ -1,17 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { getPDFPreviewUrl, getAlternativePDFUrl } from "@/lib/googleDrive";
+import { getAlternativePDFUrl } from "@/lib/googleDrive";
 
 export default function PDFViewerModal({ file, onClose }) {
   const [iframeKey, setIframeKey] = useState(Date.now());
-  const [isAndroid, setIsAndroid] = useState(false);
 
   useEffect(() => {
-    // Detect Android - use alternative viewer automatically
-    const android = /Android/i.test(navigator.userAgent);
-    setIsAndroid(android);
-    
     // Prevent body scroll when modal is open
     document.body.style.overflow = "hidden";
     
@@ -34,10 +29,8 @@ export default function PDFViewerModal({ file, onClose }) {
 
   if (!file) return null;
 
-  // Automatically use alternative viewer on Android, standard on others
-  const previewUrl = isAndroid 
-    ? getAlternativePDFUrl(file.id)
-    : `${getPDFPreviewUrl(file.id)}?rm=minimal&embedded=true`;
+  // Use Google Docs viewer for all devices - better cookie handling
+  const previewUrl = getAlternativePDFUrl(file.id);
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-zinc-900/90 backdrop-blur-sm">
@@ -66,23 +59,8 @@ export default function PDFViewerModal({ file, onClose }) {
 
         {/* PDF Viewer */}
         <div className="relative w-full h-[calc(100%-5rem)] bg-white rounded-b-2xl shadow-2xl overflow-hidden">
-          {/* Overlay to hide pop-out button - only for standard viewer */}
-          {!isAndroid && (
-            <div className="absolute top-2 right-2 w-14 h-14 bg-zinc-800 z-10 pointer-events-none rounded" />
-          )}
-          <style jsx>{`
-            iframe {
-              pointer-events: auto;
-            }
-            /* Hide Google Drive toolbar and pop-out buttons */
-            :global(.ndfHFb-c4YZDc-GSQQnc-LgbsSe),
-            :global(.ndfHFb-c4YZDc-to915-LgbsSe),
-            :global([aria-label="Pop out"]),
-            :global([aria-label="Open in new window"]) {
-              display: none !important;
-            }
-          `}</style>
-          
+          {/* Overlay to hide pop-out button */}
+          <div className="absolute top-2 right-2 w-14 h-14 bg-zinc-800 z-10 pointer-events-none rounded" />
           <iframe
             key={iframeKey}
             src={previewUrl}
