@@ -47,16 +47,7 @@ export default function PPTViewerModal({ file, onClose }) {
             </p>
           </div>
           <div className="flex items-center gap-2 ml-4">
-            {/* Fallback link to open in Google Drive */}
-            <a
-              href={`https://drive.google.com/file/d/${file.id}/view`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-3 h-10 rounded-lg bg-blue-100 hover:bg-blue-200 text-blue-700 text-sm font-medium transition"
-              title="Open in Google Drive"
-            >
-              Can't see? Open in Drive ↗
-            </a>
+
             <button
               onClick={onClose}
               className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-zinc-100 hover:bg-zinc-200 text-zinc-700 font-bold transition"
