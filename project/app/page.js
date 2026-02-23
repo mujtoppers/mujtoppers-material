@@ -80,6 +80,7 @@ export default function Home() {
             <Link
               key={track.id}
               href={track.href}
+              prefetch={false}
               className="group flex h-full flex-col overflow-hidden rounded-3xl border border-gray-200 bg-white text-zinc-800 shadow-lg shadow-gray-900/5 transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:border-orange-500 hover:shadow-orange-100/50"
             >
               {/* Image */}
